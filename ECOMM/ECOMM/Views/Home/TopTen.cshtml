@@ -1,0 +1,27 @@
+﻿<h2>Transflower Top Ten</h2>
+
+@{
+    viewbag.title = "webgrid";
+}
+
+@{
+    viewbag.title = "best performers";
+    // var grid = new webgrid(source: model);
+    //var grid = new webgrid(source: model, cansort: true);
+    //var grid = new webgrid(source: model, defaultsort: "lastname");
+    //var grid = new webgrid(source: model, columnnames: new[] { "firstname", "lastname", "email" });
+    var grid = new webgrid(source: model, rowsperpage: 3);
+}
+@grid.gethtml()
+
+@*@grid.gethtml(columns: grid.columns(
+    grid.column(columnname: "firstname", header: "first name"),
+    grid.column(columnname: "lastname", header: "last name"),
+    grid.column(columnname: "email", header: "email address"),
+    grid.column(columnname: "contactnumber", header: "mobile number"),
+    grid.column(columnname: "city", header: "location"),
+    grid.column(header: "edit", format: (item) =>
+    {
+        var link = html.actionlink("edit", "edit", new { id = item.contactnumber });
+        return link;
+    })))*@

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<BOL.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List</h2>
+
+@*<ol>
+    @foreach ( BOL.Product product in Model)
+    {
+        <li> @Html.ActionLink(product.Title,"details",new { id = product.ID })</li>
+    }
+</ol>*@
+
+      @foreach(BOL.Product prod in Model )
+    {
+        <li>
+            @*@Html.ActionLink(prod.Title, "Details", new { id = prod.ProductId })*@
+            <a href="@Url.Action("Details", "Product",new { id = prod.ID })" class="links">
+                <img src="@Url.Content(prod.Image)" alt="Image" height="150px" width="100px" alt=prod.Title />
+            </a>        </li>
+        
+    }

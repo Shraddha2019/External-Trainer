@@ -1,0 +1,40 @@
+﻿@Model BOL.Product
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<h2> Flower Details</h2>
+
+@*<p>ID : @Model.ID</p>
+<p>Title : @Model.Title</p>
+<p>Description : @Model.Description</p>
+<p>Unit Price : @Model.UnitPrice</p>
+ @Html.ActionLink("Add to Cart","AddToCart","ShoppingCart",new { id=Model.ID},null) *@
+
+
+
+<table height="50%" width="50%">
+    <tr>
+        <td>
+            <p><img src="@Url.Content(@Model.Image)" alt="Image" height="150px" width="100px" alt=prod.Title /></p>
+            <p>Title : @Model.Title</p>
+        </td>
+        <td width="30%">
+            ID : @Model.ID
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Discription :@Model.Description</p></td>
+        <td width="30%">
+            <p>Price : @Model.UnitPrice</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            @Html.ActionLink("Add To Card", "AddToCart", "ShoppingCart", new { id = Model.ID }, null)
+        </td>
+    </tr>
+</table>

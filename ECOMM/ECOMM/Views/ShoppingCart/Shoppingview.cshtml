@@ -1,0 +1,30 @@
+﻿
+@model  ECOMM.ViewModel.ShoppingViewModel
+
+
+@{
+    ViewBag.Title = "index";
+}
+
+<h2>index</h2>
+<h3>shopping details</h3>
+<h2>List of customers and list of products together</h2>  
+   
+
+<ul>
+      @foreach(var product2 in Model.products)
+    {
+        <li> @product2.Title</li>
+       <li> @product2.Description</li>
+       
+    }  
+</ul>  
+   
+   
+<h4>List of Customers</h4>  
+<ul>  
+    @foreach(var customer1 in Model.customers)
+    {
+        <li> @customer1.Name</li>
+    }
+</ul>  

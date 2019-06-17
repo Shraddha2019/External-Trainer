@@ -1,0 +1,15 @@
+﻿@*@model IEnumerable<BOL.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List</h2>
+
+<ol>
+    @foreach(BOL.Customer customer in Model)
+    {
+        <li> @Html.ActionLink(customer.custname,"details",new { id = customer.custid})</li>
+    }
+</ol>
+*@

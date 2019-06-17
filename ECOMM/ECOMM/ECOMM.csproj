@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9477C6A5-385C-4B49-A459-8383B08E6024}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ECOMM</RootNamespace>
+    <AssemblyName>ECOMM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AttributeRouting, Version=3.4.2.0, Culture=neutral, PublicKeyToken=c10f85d521a011a9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AttributeRouting.Core.3.4.2\lib\net40\AttributeRouting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AttributeRouting.Web, Version=3.4.2.0, Culture=neutral, PublicKeyToken=c10f85d521a011a9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AttributeRouting.Core.Web.3.4.2\lib\net40\AttributeRouting.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AttributeRouting.Web.Mvc, Version=3.4.2.0, Culture=neutral, PublicKeyToken=c10f85d521a011a9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AttributeRouting.3.4.2\lib\net40\AttributeRouting.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivator.1.0.0.0\lib\WebActivator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AttributeRouting.cs" />
+    <Compile Include="Controllers\AccountsController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Controllers\FlowersController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\PaymentsController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ShoppingCartController.cs" />
+    <Compile Include="Controllers\StaffController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\var.cs" />
+    <Compile Include="CustomFilters\Log.cs" />
+    <Compile Include="CustomFilters\MyErrorHandler.cs" />
+    <Compile Include="CustomHtmlHelpers\TFLHelper.cs" />
+    <Compile Include="ECOMMData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ECOMMData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\ShoppingViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Content Include="App_Data\Data.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\ECOMMData.mdf" />
+    <Content Include="App_Data\ECOMMData_log.ldf">
+      <DependentUpon>ECOMMData.mdf</DependentUpon>
+    </Content>
+    <Content Include="bin\BLL.dll" />
+    <Content Include="bin\BOL.dll" />
+    <Content Include="bin\DAL.dll" />
+    <Content Include="Global.asax" />
+    <Content Include="images\cloud.jpg" />
+    <Content Include="images\flowers.jpg" />
+    <Content Include="images\flowers\Carnation\Beautifulreminder.jpg" />
+    <Content Include="images\flowers\Carnation\Beautyofred.jpg" />
+    <Content Include="images\flowers\Carnation\Colourfulsplash.jpg" />
+    <Content Include="images\flowers\Carnation\Deepsetredcarnations.jpg" />
+    <Content Include="images\flowers\Carnation\Dozencarnations.jpg" />
+    <Content Include="images\flowers\Carnation\Dozenpinkcarnations.jpg" />
+    <Content Include="images\flowers\Carnation\expressivegerberas.jpg" />
+    <Content Include="images\flowers\Carnation\gerberaspunch.jpeg" />
+    <Content Include="images\flowers\Carnation\gleamingbunch.jpg" />
+    <Content Include="images\flowers\Carnation\happybunch.jpg" />
+    <Content Include="images\flowers\Carnation\happygerbera.jpg" />
+    <Content Include="images\flowers\Carnation\hellobeutifull.jpg" />
+    <Content Include="images\flowers\Carnation\Holidaycarnitions.jpg" />
+    <Content Include="images\flowers\Carnation\Inlovecarnations.jpg" />
+    <Content Include="images\flowers\Carnation\Ipressivegerberas.jpg" />
+    <Content Include="images\flowers\Carnation\joyfulgerberas.jpg" />
+    <Content Include="images\flowers\Carnation\loveinpink.jpeg" />
+    <Content Include="images\flowers\Carnation\Loveofcarnations.jpg" />
+    <Content Include="images\flowers\Carnation\Mugofhappiness.jpg" />
+    <Content Include="images\flowers\Carnation\Newbeginnings.jpg" />
+    <Content Include="images\flowers\Carnation\Peacefullyenergetic.jpg" />
+    <Content Include="images\flowers\Gerbera\brightsunshine.jpg" />
+    <Content Include="images\flowers\Gerbera\cheerfuleight.jpg" />
+    <Content Include="images\flowers\Gerbera\colourfulgerberas.jpg" />
+    <Content Include="images\flowers\Gerbera\expressivegerberas.jpg" />
+    <Content Include="images\flowers\Gerbera\gerberaspunch.jpeg" />
+    <Content Include="images\flowers\Gerbera\gleamingbunch.jpg" />
+    <Content Include="images\flowers\Gerbera\happybunch.jpg" />
+    <Content Include="images\flowers\Gerbera\happygerbera.jpg" />
+    <Content Include="images\flowers\Gerbera\Ipressivegerberas.jpg" />
+    <Content Include="images\flowers\Gerbera\joyfulgerberas.jpg" />
+    <Content Include="images\flowers\Gerbera\loveinpink.jpeg" />
+    <Content Include="images\flowers\Gerbera\orangehappygerberas.jpg" />
+    <Content Include="images\flowers\Gerbera\pinkbreeze.jpg" />
+    <Content Include="images\flowers\Gerbera\pinkgerbera.jpg" />
+    <Content Include="images\flowers\Gerbera\pinkwrap.jpg" />
+    <Content Include="images\flowers\Gerbera\summerfreshwhite.jpg" />
+    <Content Include="images\flowers\Gerbera\sunnybeauties.jpg" />
+    <Content Include="images\flowers\Gerbera\sunshinegerberas.jpeg" />
+    <Content Include="images\flowers\Lily\7AsiaticLilies.jpg" />
+    <Content Include="images\flowers\Lily\BreathofFreshLilies.jpg" />
+    <Content Include="images\flowers\Lily\BudsofPositivity.jpg" />
+    <Content Include="images\flowers\Lily\FantasticLilies.jpg" />
+    <Content Include="images\flowers\Lily\HolyBeauties.jpg" />
+    <Content Include="images\flowers\Lily\NaturalBeauty.jpg" />
+    <Content Include="images\flowers\Lily\PinkLilies.jpg" />
+    <Content Include="images\flowers\Lily\PinkLilyPosy.jpg" />
+    <Content Include="images\flowers\Lily\RomanceOfLilies.jpg" />
+    <Content Include="images\flowers\Lily\RoyalLilies.jpeg" />
+    <Content Include="images\flowers\Lily\ShiningLilies.jpg" />
+    <Content Include="images\flowers\Lily\StarLilies.jpg" />
+    <Content Include="images\flowers\Lily\SunshineLilies.jpg" />
+    <Content Include="images\flowers\Lily\WhiteLilyLove.jpg" />
+    <Content Include="images\flowers\Lily\YellowLilies8XL.jpg" />
+    <Content Include="images\flowers\Lily\YellowPinkLilies.jpg" />
+    <Content Include="images\flowers\Orchid\DeluxeOrchids.jpg" />
+    <Content Include="images\flowers\Orchid\LoveofOrchids.jpg" />
+    <Content Include="images\flowers\Orchid\NobleOrchids.jpg" />
+    <Content Include="images\flowers\Orchid\OrchidBreeze.jpg" />
+    <Content Include="images\flowers\Orchid\OrchidJumbo.jpg" />
+    <Content Include="images\flowers\Orchid\OrchidTime.jpg" />
+    <Content Include="images\flowers\Orchid\PurpleAdmiration.jpg" />
+    <Content Include="images\flowers\Orchid\QueensSpecial.jpg" />
+    <Content Include="images\flowers\Orchid\RoyalBlue.jpg" />
+    <Content Include="images\flowers\Orchid\True Queen.jpg" />
+    <Content Include="images\flowers\Orchid\VictorianSurprise.jpg" />
+    <Content Include="images\flowers\Orchid\WinterOrchids.jpg" />
+    <Content Include="images\flowers\Rose\ADozenYellowRoses .jpg" />
+    <Content Include="images\flowers\Rose\Basketperfect.jpg" />
+    <Content Include="images\flowers\Rose\classyRoses.jpg" />
+    <Content Include="images\flowers\Rose\EnchantedRoses.jpg" />
+    <Content Include="images\flowers\Rose\passionofrose.jpg" />
+    <Content Include="images\flowers\Rose\Peach.jpg" />
+    <Content Include="images\flowers\Rose\RedRose.jpg" />
+    <Content Include="images\flowers\Rose\RoseCorsage.jpg" />
+    <Content Include="images\flowers\Rose\Rosemail.jpg" />
+    <Content Include="images\flowers\Rose\sunnyroses.jpg" />
+    <Content Include="images\flowers\Rose\vibrantRoses.jpg" />
+    <Content Include="images\flowers\Rose\vivid roses.jpg" />
+    <Content Include="images\flowers\Rose\White.jpg" />
+    <Content Include="images\Greenhouse.jpg" />
+    <Content Include="images\Greenhouse2.jpg" />
+    <Content Include="images\Grower-sec4.jpg" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Views\App_LocalResources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{ab232615-6514-4b4f-be1d-7b67541db875}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BOL\BOL.csproj">
+      <Project>{c02d1b42-9017-47e7-978c-8079b727969f}</Project>
+      <Name>BOL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{b58212c6-47c9-414c-acb6-7f2b1a376749}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Aboutus.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\contactus.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Accounts\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Accounts\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Orders\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Product\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Product\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Customer\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Customer\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ShoppingCart\index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Employees\Register.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Employees\GetById.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Payments\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Payments\Pending.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Staff\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\BillingView.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Home\Chart.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Home\CustomerView.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Home\CustomHelper.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Home\ProductView.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Home\Revenue.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Home\SalesView.cshtml" />
+    <Content Include="Views\Home\Services.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Home\TopTen.cshtml" />
+    <Content Include="Views\Home\TopTenStyle.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Home\TopTenStyleRowSelect.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\EmployeeView.cshtml" />
+    <Content Include="Views\Home\OrderView.cshtml" />
+    <Content Include="Views\ShoppingCart\Shoppingview.cshtml" />
+    <Content Include="Views\ShoppingCart\AddToCart.cshtml" />
+    <Content Include="ECOMMData.xsc">
+      <DependentUpon>ECOMMData.xsd</DependentUpon>
+    </Content>
+    <None Include="ECOMMData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ECOMMData.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="ECOMMData.xss">
+      <DependentUpon>ECOMMData.xsd</DependentUpon>
+    </Content>
+    <Content Include="Web.config" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Employees\register1.cshtml" />
+    <Content Include="images\flowers\Gerbera\Thumbs.db" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1545</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51122/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

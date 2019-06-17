@@ -1,0 +1,4 @@
+C:\Users\Neova-user\Documents\.net training\ECOMM\BOL\bin\BOL.dll
+C:\Users\Neova-user\Documents\.net training\ECOMM\BOL\bin\BOL.pdb
+C:\Users\Neova-user\Documents\.net training\ECOMM\BOL\obj\Debug\BOL.dll
+C:\Users\Neova-user\Documents\.net training\ECOMM\BOL\obj\Debug\BOL.pdb

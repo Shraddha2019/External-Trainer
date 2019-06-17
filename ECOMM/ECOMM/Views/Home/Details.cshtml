@@ -1,0 +1,24 @@
+﻿@using BOL
+@model BLL.Details.listdetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<!--  Sales Dashboard -->
+
+
+<h2>Employee details product Dashboard</h2>
+<p>
+    <h3>Employee</h3>
+    <div>
+        @Html.Partial("EmployeeView", Model.employees)
+    </div>
+</p>
+<p>
+    <h3>Products</h3>
+    <div>
+        @Html.Partial("OrderView", Model.orders)
+    </div>
+</p>

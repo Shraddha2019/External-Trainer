@@ -1,0 +1,9 @@
+C:\Users\Neova-user\Documents\.net training\ECOMM\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Neova-user\Documents\.net training\ECOMM\BLL\bin\BLL.dll
+C:\Users\Neova-user\Documents\.net training\ECOMM\BLL\bin\BLL.pdb
+C:\Users\Neova-user\Documents\.net training\ECOMM\BLL\bin\BOL.dll
+C:\Users\Neova-user\Documents\.net training\ECOMM\BLL\bin\DAL.dll
+C:\Users\Neova-user\Documents\.net training\ECOMM\BLL\bin\BOL.pdb
+C:\Users\Neova-user\Documents\.net training\ECOMM\BLL\bin\DAL.pdb
+C:\Users\Neova-user\Documents\.net training\ECOMM\BLL\obj\Debug\BLL.dll
+C:\Users\Neova-user\Documents\.net training\ECOMM\BLL\obj\Debug\BLL.pdb

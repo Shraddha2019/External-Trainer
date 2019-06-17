@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "EmployeeView";
+}
+
+<h2>EmployeeView</h2>
+
+@model IEnumerable<BLL.Details.Employee>
+@using BLL.Details
+
+@if (Model != null)
+{
+    <div class="grid">
+        <table cellspacing="0" width="80%">
+            <thead>
+                <tr> <th>Name </th> <th> Age </th> <th> Address </th> </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td align="left"> @item.Name </td>
+                        <td align="left"> @item.age  </td>
+                        <td align="left"> @item.City </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

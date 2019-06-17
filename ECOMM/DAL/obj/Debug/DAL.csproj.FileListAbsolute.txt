@@ -1,0 +1,7 @@
+C:\Users\Neova-user\Documents\.net training\ECOMM\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Neova-user\Documents\.net training\ECOMM\DAL\bin\Debug\DAL.dll
+C:\Users\Neova-user\Documents\.net training\ECOMM\DAL\bin\Debug\DAL.pdb
+C:\Users\Neova-user\Documents\.net training\ECOMM\DAL\bin\Debug\BOL.dll
+C:\Users\Neova-user\Documents\.net training\ECOMM\DAL\bin\Debug\BOL.pdb
+C:\Users\Neova-user\Documents\.net training\ECOMM\DAL\obj\Debug\DAL.dll
+C:\Users\Neova-user\Documents\.net training\ECOMM\DAL\obj\Debug\DAL.pdb
