@@ -13,35 +13,35 @@ namespace ECOMM.Controllers
         //
         // GET: /ShoppingCart/
 
-        public ActionResult Shoppingview()
-        {
+        //public ActionResult Shoppingview()
+        //{
 
 
-            ShoppingViewModel ShoppingViewModel = new ShoppingViewModel()
-              {
-                  // List<Customer> customers = (List<Customer>)this.HttpContext.Application["catlog1"];
-                  //    Customer customers = (List<Customer>)this.HttpContext.Application["catlog1"],
+        //    ShoppingViewModel ShoppingViewModel = new ShoppingViewModel()
+        //      {
+        //          // List<Customer> customers = (List<Customer>)this.HttpContext.Application["catlog1"];
+        //          //    Customer customers = (List<Customer>)this.HttpContext.Application["catlog1"],
 
-                  customers = (List<Customer>)HttpContext.Application["catlog1"],
-                  products = (List<Product>)HttpContext.Application["catlog"],
+        //          customers = (List<Customer>)HttpContext.Application["catlog1"],
+        //          products = (List<Product>)HttpContext.Application["catlog"],
 
-              };
-            ShoppingViewModel ShoppingView = new ShoppingViewModel();
-            ShoppingView.products = (List<Product>)HttpContext.Application["catalog"];
-            ShoppingView.customers = (List<Customer>)HttpContext.Application["catlog1"];
-
-
+        //      };
+        //    ShoppingViewModel ShoppingView = new ShoppingViewModel();
+        //    ShoppingView.products = (List<Product>)HttpContext.Application["catalog"];
+        //    ShoppingView.customers = (List<Customer>)HttpContext.Application["catlog1"];
 
 
-            return View(ShoppingView);
-        }
+
+
+        //    return View(ShoppingView);
+        //}
         List<Product> productss = new List<Product>();
 
         public ActionResult AddToCart(int id = 0)
         {
             Product ProdFound = null;
             List<Product> Pprod = new List<Product>();
-        //    List<Product> products = (List<Product>)this.HttpContext.Application["catalog"];
+            //    List<Product> products = (List<Product>)this.HttpContext.Application["catalog"];
             List<Product> products = ProductManager.GetAllProduct();
             foreach (Product prod in products)
             {
@@ -64,51 +64,11 @@ namespace ECOMM.Controllers
                 productss.Add(ProdFound);
                 Session["ProductList"] = productss;
             }
-            if (TempData["ProductList"] != null)
-            {
-                productss = (List<Product>)(TempData["ProductList"]);
-                productss.Add(ProdFound);
-            }
-            else
-            {
-                productss.Add(ProdFound);
-                TempData["ProductList"] = productss;
-                TempData.Keep("ProductList");
-            }
+      
             return View(productss);
         }
-        public ActionResult RemoveItem(int id)
-        {
-            productss = (List<Product>)(Session["ProductList"]);
 
-            foreach (BOL.Product prod in (List<Product>)Session["ProductList"])
-            {
-                if (prod.ID == id)
-                {
-                    var ind = productss.Find(c => c.ID == id);
-                    productss.Remove(ind);
-                    break;
-                }
-            }
-            Session["ProductList"] = productss;
-            return RedirectToAction("AddToCarT", new { id = 0 });
-        }
-        //public ActionResult RemoveItem(int id)
-        //{
-        //    productss = (List<Product>)(Session["ProductList"]);
-
-        //    foreach (BOL.Product prod in (List<Product>)Session["ProductList"])
-        //    {
-        //        if (prod.ID == id)
-        //        {
-        //            var ind = productss.Find(c => c.ID == id);
-        //            productss.Remove(ind);
-        //            break;
-        //        }
-        //    }
-        //    Session["ProductList"] = productss;
-        //    return RedirectToAction("AddToCard", new { id = 0 });
-        //}
+      
         //public ActionResult Index()
         //{
         //    ShoppingCart theCart = this.Session["cart"] as ShoppingCart;
@@ -130,13 +90,28 @@ namespace ECOMM.Controllers
         //    return RedirectToAction("index");
         //}
 
-        //[HttpGet]
-        public ActionResult RemoveFromCart(int id)
-        { //Logic for removing item from Shopping cart kept in session
-            ShoppingCart theCart = this.Session["cart"] as ShoppingCart;
-            return RedirectToAction("index");
-        }
+        ////[HttpGet]
+        //public ActionResult RemoveFromCart(int id)
+        //{ //Logic for removing item from Shopping cart kept in session
+        //    ShoppingCart theCart = this.Session["cart"] as ShoppingCart;
+        //    return RedirectToAction("index");
+        //}
 
-    
+        public ActionResult RemoveItem(int id)
+        {
+            productss = (List<Product>)(Session["ProductList"]);
+
+            foreach (BOL.Product prod in (List<Product>)Session["ProductList"])
+            {
+                if (prod.ID == id)
+                {
+                    var ind = productss.Find(c=>c.ID == id);
+                    productss.Remove(ind);
+                    break;
+                }
+            }
+            Session["ProductList"] = productss;
+            return RedirectToAction("AddToCard", new { id = 0 });
+        }
 }
 }
